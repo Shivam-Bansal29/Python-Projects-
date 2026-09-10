@@ -31,25 +31,27 @@ questions = [
     {
         "que": "Which is the largest river of India ?",
         "ans": "a. Kaveri     b. Godawari\nc. Ganga     d. Yamuna",
-        "correct": "a",
+        "correct": "c",
         "prize": 500000
     }
 ]
 
 for y in questions:
-    print(y["que"], "\n")
-    print(y["ans"], "\n")
+    print("\n" + y["que"] + "\n")
+    print(y["ans"] + "\n")
     answer = input("Enter the option: ").lower()
 
     if answer == "0":
-        print("\nYou chose to exit the game")
+        print("\nYou chose to exit the game\n")
         break
     elif answer == y["correct"]:
-        print("\nWell done!! Your answer is right")
+        print("\nWell done!! Your answer is right!\n")
         money += y["prize"]
         print(f"You win {money}\n")
     else:
-        print(f"\nYour answer is wrong\nRight answer is {y['correct']}\nGame is over now")
+        print(f"\nYour answer is wrong!")
+        print(f"Right answer is {y['correct']}\n")
+        print("Game is over now\n")
         break
 
-print(f"You won {money}")
+print(f"\n🎉 Final Score: You won {money} 🎉\n")
